@@ -23,7 +23,7 @@ def tambah_catatan():
         "durasi": durasi
     }
     catatan.append(catatan_baru)
-    print("\nCatatan berhasil ditambahkan!\n")
+    print("i\nCatatan berhasil ditambahkan!\n")
 
 
 def lihat_catatan():
@@ -31,9 +31,7 @@ def lihat_catatan():
 
     Jika belum ada catatan, tampilkan pesan yang sesuai.
     """
-    if not catatan:
-        print("Belum ada catatan.\n")
-        return
+    
 
     # Hitung lebar kolom berdasarkan konten agar rata
     no_w = len(str(len(catatan)))
@@ -55,6 +53,7 @@ def lihat_catatan():
         durasi = str(c.get('durasi', 0)).rjust(durasi_w)
         print(f"{no}  {mapel}  {topik}  {durasi}")
     print()
+    input("Tekan Enter untuk kembali ke menu...")
 
 
 def total_waktu():
